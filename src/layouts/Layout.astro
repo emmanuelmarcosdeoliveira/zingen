@@ -62,6 +62,11 @@ import "../styles/main.scss"
   --fs-lg: 1.25rem;
   --fs-xl: 1.5rem;
   --fs-2xl: 2.5rem;
+  --px-lg: 1.5rem;
+
+  --py-base: 1rem;
+  --py-lg: 1.5rem;
+  --py-xl: 3rem;
 }
 :root {
   --bg-color: #09090b;
@@ -88,6 +93,10 @@ h3 {
     --fs-lg: 2rem;
     --fs-xl: 3rem;
     --fs-2xl: 4rem;
+    --px-lg: 2rem;
+    --py-base: 1.5rem;
+    --py-lg: 2.5rem;
+    --py-xl: 5rem;
   }
 }
 a {
@@ -97,5 +106,46 @@ a {
  ul[role="list"] {
    list-style: none;
  }
+ .container {
+  --max-width: 375px;
+  margin-inline: auto;
+  width: min(var(--max-width), 100% - var(--px-lg) * 2);
+  border: 1px solid violet;
+ }
+ .desktop-only {
+  display: none;
+ }
+ .even-columns {
+  display: grid;
+  gap: 1rem;
+ }
 
+
+ @media (width >= 80em) {
+  .container {
+    --max-width: 80rem;
+  }
+  .desktop-only {
+  display: initial;
+ }
+ .even-columns {
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+ }
+
+ }
+ .py-base {
+  padding-block: var(--py-base);
+ }
+ .py-lg {
+  padding-block: var(--py-lg);
+ }
+ .py-xl {
+  padding-block: var(--py-xl);
+ }
+ .px-lg {
+  padding-inline: var(--px-lg);
+ }
+ 
+ 
 </style>
