@@ -17,7 +17,7 @@ import Header from "../container/Header.astro"
 		<title>Zingen | OFS</title>
 	</head>
 	<body>
-    <Header  />
+    <Header  />   
   <slot />
 	</body>
 </html>
@@ -66,6 +66,7 @@ import Header from "../container/Header.astro"
     line-height: 1.6;
     color: var(--text-color-primary);
     background-color: var(--bg-color);
+    scroll-behavior: smooth;
 	}
 
 *,*::before,*::after {
@@ -125,8 +126,7 @@ a {
   --max-width: 375px;
   margin-inline: auto;
   width: min(var(--max-width), 100% - var(--px-lg) * 2);
-  border: 1px solid violet;
- }
+   }
  .desktop-only {
   display: none;
 }
@@ -159,8 +159,27 @@ a {
  .px-lg {
   padding-inline: var(--px-lg);
  }
-
-
- 
+img {
+  max-width: 100%;
+ display: inline-block;
+}
+section {
+  header {
+    strong {
+      display: block;
+      font: var(--fw-md) var(--ff-sm)/100% var(--ff-sans);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-color-primary);
+    }
+    h2 {
+      margin-top: .5rem;
+    }
+     }
+  p {
+     margin-top: .5rem;
+     color: var( --text-color-secondary);
+    }
+}
 
 </style>

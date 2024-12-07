@@ -12,15 +12,10 @@
   },
   "dependencies": {
     "astro": "^4.16.16",
-    "sass": "^1.82.0",
-    "stylelint": "^16.11.0"
+    "sass": "^1.82.0"
   },
   "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276",
   "devDependencies": {
-    "@typescript-eslint/parser": "^8.17.0",
-    "postcss-html": "^1.7.0",
-    "stylelint-config-html": "^1.1.0",
-    "stylelint-config-standard": "^36.0.1",
-    "stylelint-order": "^6.0.4"
+    "@typescript-eslint/parser": "^8.17.0"
   }
 }

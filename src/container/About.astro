@@ -1,0 +1,46 @@
+---
+import mockup from "../assets/images/mockups.png"
+import Image from "astro/components/Image.astro"
+---
+
+<section id="smartphones-img">
+  <div class="container">
+    <img src={mockup.src} alt="imagem de 2 celuras">
+  </div>
+ </section>
+ <section id="about">
+  <div class="container even-columns py-xl item-center">
+<div>
+  <header>
+    <strong>
+      Conheça o app
+    </strong>
+    <h2>O aplicativo perfeito para aprender a cantar</h2>
+  </header>
+  <p>Nosso algoritmo de Inteligência Artificial permite remover a voz original e manter as melodias das músicas. Dessa forma, temos o maior repertório musical para Karaokê! Além disso, ao cantar, sua voz e afinação é comparada pelo algoritmo permitindo uma avaliação precisa da sua performance te ajudando a melhorar seu canto. </p>
+
+</div>
+<div class="desktop-only">
+<Image width={554} height={558} src={mockup} alt="Imagem de 2 celulares" >
+</div>
+  </div>
+ </section>
+<style>
+#smartphones-img { 
+  paddin-top: 5rem;
+  background: url(../assets/icons/illl.svg) top/cover;
+
+  @media( width >= 80em) {
+    img {
+        display: none;
+    }
+  }
+}
+#about {  
+  background-color: var(--surface-color) ;
+  & .even-columns {
+    gap: 2rem;
+  }
+}
+
+</style>
