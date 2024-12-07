@@ -1,5 +1,6 @@
 ---
 import "../styles/main.scss"
+import Header from "../container/Header.astro"
 ---
 
 <!doctype html>
@@ -16,7 +17,8 @@ import "../styles/main.scss"
 		<title>Zingen | OFS</title>
 	</head>
 	<body>
-		<slot />
+    <Header  />
+  <slot />
 	</body>
 </html>
 
@@ -109,8 +111,10 @@ h3 {
 a {
   text-decoration: none;
   color: inherit;
-  &:hover {
+    &:hover {
     background: linear-gradient(90deg, #f7b733 0%, #fc4a1a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
   }
 }

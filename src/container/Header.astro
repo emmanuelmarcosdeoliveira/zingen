@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import  "../styles/main.scss";
+import Logo from  "../assets/icons/logo.svg"
+---
+
+<header>
+  <div class=" container py-base">
+      <nav class="flex item-center gap-1.5 ">
+        <a href="#">
+          <Image src={Logo} alt="Logo Zingen">
+        </a>
+        <a class="desktop-only" href="#about">Conheça o App</a>
+        <a class="desktop-only" href="#features">Funcionalidades</a>
+        <a class="desktop-only" href="#pricing">Planos e preços</a>
+        <a class="btn btn-sm" href="#download">Baixar Agora</a>
+
+      </nav>    
+
+  </div>
+</header>
+
+
+<style>
+  header {
+        & a:first-child {
+        margin-right: auto;
+      }
+   }
+</style>
