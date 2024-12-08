@@ -1,0 +1,129 @@
+---
+import iconMagic from "../assets/icons/MagicWand.svg"
+import iconGame from "../assets/icons/GameController.svg"
+import mokupCel from "../assets/images/Tela 2.png"
+import mokupCel2 from "../assets/images/Tela 1.png"
+import mokupCel3 from "../assets/images/Tela 3.png"
+import iconMic from "../assets/icons/MicrophoneStage.svg"
+import iconComunity from "../assets/icons/comunity.svg"
+import iconMusic from "../assets/icons/MusicNotes.svg"
+---
+<section id="features">
+<div class="cards container py-xl grid gap-1.5">
+  <div class="card py-lg px-lg">
+    <img src={iconMagic.src} alt="iconde de varinha mágica">
+    <h3>A maior biblioteca de músicas de Karaokê!</h3>
+    <p>Nossa IA remove a voz de qualquer música e a deixa pronta pra cantar, num passe de mágica!</p>
+  </div>
+  <div class="card py-lg px-lg">
+    <div>
+      <img src={iconGame.src} alt="iconde de varinha mágica">
+      <h3>Experiência gamificada</h3>
+      <p>Sua performance é pontuada de acordo com nosso algoritmo ultra preciso. Desafie-se, ganhe reconhecimento e comemore sua evolução!</p>
+    </div>
+    <img class="desktop-only" src={mokupCel.src} alt="Imagem de 2 celulares">
+  </div>
+  <div class="card py-lg px-lg">
+    <div>
+      <img src={iconMic.src} alt="iconde de varinha mágica">
+      <h3>Grave suas performances</h3>
+      <p>Seja para compartilhar com os amigos ou para acompanhar sua evolução, nosso recurso de gravação de áudio e vídeo permite que você aproveite a experiência ao máximo! </p>
+    </div>
+   </div>
+   <div class="card py-lg px-lg">
+    <div>
+      <img src={iconComunity.src} alt="iconde de varinha mágica">
+      <h3>Compartilhe com a comunidade</h3>
+      <p>Compartilhe suas gravações com a comunidade, interaja e explore a performance vocal de outras pessoas no seu feed!</p>
+    </div>
+    <img class="desktop-only" src={mokupCel2.src} alt="Imagem de 2 celulares">
+  </div>
+  <div class="card py-lg px-lg">
+    <div>
+      <img src={iconMusic.src} alt="iconde de varinha mágica">
+      <h3>Letras em tempo-real</h3>
+      <p>Nunca perca o ritmo com as letras das músicas sincronizadas e exibidas em tempo real. Você também pode ativar a voz original da música para ajudar.</p>
+    </div>
+    <img class="desktop-only" src={mokupCel3.src} alt="Imagem de 2 celulares">
+  </div>
+ 
+
+</div>  
+
+</section>
+
+<style>
+.card {
+  background-color: var(--surface-color);
+  border 1px solid var(--stroke-color);
+  border-radius: 1.5rem;
+  h3 {
+    margin-top: 1rem;
+  }
+}
+
+/* Estilos Desktop */
+ #features {
+   @media (width >= 80em) {
+  .cards {
+    grid-template-columns: 17.5rem 1fr 1fr  17.5rem ;
+    grid-template-rows: 25rem 25rem;
+   gap: 2rem;
+  }
+    .card {
+      position: relative;
+      overflow: hidden;
+      & h3 {
+        margin-top: 3rem;
+      }
+      .desktop-only {
+        position: absolute;
+        max-width: 15rem;
+        filter: drop-shadow(1rem 1rem 4rem rgb(0 0 0 / .34));
+        } 
+        &:nth-child(1) {
+          grid-column: 1/2;
+        }
+        &:nth-child(2) {
+          grid-column: 2/4;
+          & > div {
+            max-width: 16rem;
+          }
+          & .desktop-only {
+            bottom: 2rem;
+            right: 2rem;
+            filter: drop-shadow(1rem 1rem 4rem rgba(0 0 0 /0.34));
+          }
+        }
+        &:nth-child(3) {
+          grid-column: 4/5;
+        }
+        &:nth-child(4) {
+          grid-column: 1/3;
+          grid-row: 2/3;
+          & > div {
+            max-width: 16rem;
+            margin-left: auto;
+          }
+          & .desktop-only {
+            bottom: 2rem;
+            left: 2rem;
+            filter: drop-shadow(1rem 1rem 4rem rgba(0 0 0 /0.34));
+          }
+        }
+        &:nth-child(5) {
+          grid-column: 3/5;
+          grid-row: 2/3;
+          & > div {
+            max-width: 16rem;
+            
+          }
+          & .desktop-only {
+            top: 2rem;
+            right: 2rem;
+            filter: drop-shadow(1rem 1rem 4rem rgba(0 0 0 /0.34));
+          }
+        }
+    }            
+  }  
+</style>
