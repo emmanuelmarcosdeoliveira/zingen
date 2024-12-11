@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import Apple from "../assets/icons/AppStore.svg";
+import Play from "../assets/icons/PlayStore.svg";
+import Person from "../assets/images/Person.png";
+---
+
+<section id="download">
+  <div class="container py-xl">
+    <div class="card px-lg even-columns items-center">
+      <div>
+        <header>
+          <strong>download</strong>
+          <h2>Bora Cantar?</h2>
+        </header>
+        <p>
+          Desperte seu potencial de estrela, liberte sua voz e faça parte da
+          comunidade musical mais envolvente. Baixe o Zingen agora e transforme
+          suas performances em experiências inesquecíveis!
+        </p>
+        <div class="buttons flex gap-1">
+          <a href="">
+            <Image
+              width={160}
+              src={Play}
+              alt="Botão para baixar da playStore"
+            />
+          </a>
+          <a href="">
+            <Image
+              width={160}
+              src={Apple}
+              alt="Botão para baixar da Apple Store"
+            />
+          </a>
+        </div>
+      </div>
+      <div id="person-singing">
+        <img src={Person.src} alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #download {
+    .card {
+      padding: 3rem 1.5rem 0rem;
+      position: relative;
+      & > img {
+        width: 14.5rem;
+        position: absolute;
+        bottom: 0;
+        right: -3.5rem;
+      }
+    }
+
+    .buttons {
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    @media (width >= 80rem) {
+      .card {
+        padding: 0rem 5rem;
+        & > div:nth-child(1) {
+          padding-top: 50%;
+        }
+        & > img {
+          width: 29.125rem;
+        }
+      }
+    }
+  }
+</style>
