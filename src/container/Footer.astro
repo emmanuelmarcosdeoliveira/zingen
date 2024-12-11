@@ -1,0 +1,133 @@
+---
+import Logo from "../assets/icons/logo.svg";
+import "../styles/main.scss";
+---
+
+<footer>
+  <div class="container px-xl grid">
+    <section class="grid top">
+      <img src={Logo.src} alt="Logo Zingen" />
+      <nav class="even-columns">
+        <ul role="list" class="grid gap-1.5">
+          <li class="title">Produto</li>
+          <li><a href="#features">Funcionalidades</a></li>
+          <li><a href="#pricing">Planos e preços</a></li>
+          <li><a href="#download">Downloads</a></li>
+        </ul>
+        <ul role="list" class="grid gap-1.5">
+          <li class="title">Empresa</li>
+          <li><a href="#about">Sobre nós</a></li>
+          <li><a href="#">Trabalhe conosco</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        <ul role="list" class="grid gap-1.5">
+          <li class="title">Legal</li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="bottom flex gap-1.5">
+      <div class="flex gap-1.5">
+        <a href="#" class="social" aria-label="instagran"></a>
+        <a href="#" class="social" aria-label="twiter"></a>
+        <a href="#" class="social" aria-label="discord"></a>
+      </div>
+      <span class="copy"> ©2024 Zingen Technologies, Inc.</span>
+    </section>
+  </div>
+</footer>
+
+<style>
+  footer {
+    color: var(--text-color-secondary);
+    font-weight: var(--fw-md);
+
+    & .container {
+      padding-inline: 3rem;
+    }
+
+    & .container,
+    & .top {
+      gap: 3rem;
+    }
+  }
+  & nav.even-columns {
+    gap: 4rem;
+  }
+
+  & .top ul {
+    align-content: start;
+  }
+
+  & .title {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brand-color-primary);
+  }
+  & .bottom {
+    flex-wrap: wrap;
+    & > div {
+      margin-right: auto;
+    }
+    & span {
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  @media (width>= 80em) {
+    .container {
+      padding-inline: 0;
+      padding-bottom: 2rem;
+    }
+    & .top {
+      grid-template-columns: auto 1fr;
+      & nav {
+        margin-left: auto;
+      }
+      & ul {
+        width: 14rem;
+      }
+    }
+  }
+
+  a.social {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+
+    &[aria-label="discord"] {
+      background-image: url(../assets/icons/discord.svg);
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url(../assets/icons/discord-hover.svg);
+      }
+    }
+    &[aria-label="instagran"] {
+      background-image: url(../assets/icons/instagram.svg);
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url(../assets/icons/instagram-hover.svg);
+        background-repeat: no-repeat; 
+    }
+    &[aria-label="tiktok"] {
+      background-image: url(../assets/icons/tiktok.svg);
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url(../assets/icons/tiktok-hover.svg);
+        background-repeat: no-repeat;
+      }
+    }
+    &[aria-label="twiter"] {
+      background-image: url(../assets/icons/twiter.svg);
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url(../assets/icons/twiter-hover.svg);
+        background-repeat: no-repeat;
+      }
+    }
+  }
+</style>
