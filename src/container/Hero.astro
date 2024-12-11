@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import muiscBar from "../assets/icons/musicBar.svg";
+---
+
+<section id="hero">
+  <div class="container py-xl">
+    <Image src={muiscBar} alt="icone de som" />
+    <h1>Quem canta seus males espanta</h1>
+    <p>Cantar nunca foi tão fácil</p>
+    <div class="buttons flex item-center gap-1">
+      <a href="#pricing" class="btn btn-md" aria-label="Ver Planos"></a>
+      <a href="#download" class="btn btn-md">Baixar agora</a>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  #hero {
+    background: url(../assets/hero-section.svg) no-repeat bottom center/cover;
+    text-align: center;
+    @media (width <= 1279px) {
+      background: none;
+    }
+    h1 {
+      margin-top: 1rem;
+    }
+    p {
+      font: var(--fw-md) var(--fs-lg) / 1.4 var(--ff-sans);
+      color: var(--text-color-secondary);
+      margin-top: 0.5rem;
+    }
+    & img[src*="music"] {
+      width: 12.875rem;
+    }
+  }
+
+  .buttons {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  @media (width >= 80rem) {
+    #hero {
+      padding-bottom: 15rem;
+      h1 {
+        margin-top: 1.5rem;
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 2.5rem;
+      }
+      & img[src*="music"] {
+        width: 25.75rem;
+      }
+      .buttons {
+        margin-top: 3rem;
+      }
+    }
+  }
+</style>

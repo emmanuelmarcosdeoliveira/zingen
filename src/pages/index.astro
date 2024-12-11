@@ -1,17 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import About from "../container/About.astro";
+import Download from "../container/Download.astro";
+import Features from "../container/Features.astro";
+import Hero from "../container/Hero.astro";
+import Pricing from "../container/Pricing.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/main.scss";
 ---
+
 <Layout>
-<h1>Teste</h1>
+  <Hero />
+  <About />
+  <Features />
+  <Pricing />
+  <Download />
 </Layout>
-
-<style lang="scss">
-h1 {
-  font-size: 40px;
-  font-weight: 700;
-}
-
-</style>
+<style lang="scss"></style>
