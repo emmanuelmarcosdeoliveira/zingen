@@ -1,185 +1,204 @@
 ---
-import "../styles/main.scss"
-import Header from "../container/Header.astro"
+import Header from "../container/Header.astro";
+import "../styles/main.scss";
 ---
 
 <!doctype html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta name="description" content="Zingen é uma landig-page de aplicativo de música desenvolvida por Emmanuel Oliveira">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-		<title>Zingen | OFS</title>
-	</head>
-	<body>
-    <Header  />   
-  <slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta
+      name="description"
+      content="Zingen é uma landig-page de aplicativo de música desenvolvida por Emmanuel Oliveira"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Zingen | OFS</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
 </html>
 
 <style lang="scss" is:global>
   @use "../styles/main.scss" as var;
 
   :root {
-  //Colors 
-  --bg-color: #09090b;
-  --surface-color: #18181b;
-  --stroke-color: #27272a;
-  --text-color-secondary: #a1a1aa;
-  --text-color-primary: #f4f4f5;
-  --brand-color-primary: #f7b733;
-  --brand-color-secondary: #fc4a1a;  
+    //Colors
+    --bg-color: #09090b;
+    --surface-color: #18181b;
+    --stroke-color: #27272a;
+    --text-color-secondary: #a1a1aa;
+    --text-color-primary: #f4f4f5;
+    --brand-color-primary: #f7b733;
+    --brand-color-secondary: #fc4a1a;
     // Fonte Default
-  --ff-sans: "Inter", system-ui, sans-serif;
-  --btn-bg-color: var(--text-color-primary);
-  --btn-color: var(--bg-color);
-// Peso da Fonte
-  --fw-base: 400;
-  --fw-md: 500;
-  --fw-bold: 800;
-// Tamanho da Fonte
-  --fs-sm: 0.875rem;
-  --fs-base: 1rem;
-  --fs-lg: 1.25rem;
-  --fs-xl: 1.5rem;
-  --fs-2xl: 2.5rem;
-  --fs-btnlg: 1.125rem;
-// Espaçamento Horizontal
-  --px-lg: 1.5rem;
-  // Espaçamento Vertical
-  --py-base: 1rem;
-  --py-lg: 1.5rem;
-  --py-xl: 3rem;
-}
-	html,body {
-		height: 100%;
-		margin: 0;
-		width: 100%;
+    --ff-sans: "Inter", system-ui, sans-serif;
+    --btn-bg-color: var(--text-color-primary);
+    --btn-color: var(--bg-color);
+    // Peso da Fonte
+    --fw-base: 400;
+    --fw-md: 500;
+    --fw-bold: 800;
+    // Tamanho da Fonte
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.5rem;
+    --fs-2xl: 2.5rem;
+    --fs-btnlg: 1.125rem;
+    // Espaçamento Horizontal
+    --px-lg: 1.5rem;
+    // Espaçamento Vertical
+    --py-base: 1rem;
+    --py-lg: 1.5rem;
+    --py-xl: 3rem;
+  }
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
     font-family: var(--ff-sans);
     font-weight: var(--fw-base);
-    font-size:    var(--fs-base);
+    font-size: var(--fs-base);
     line-height: 1.6;
     color: var(--text-color-primary);
     background-color: var(--bg-color);
     scroll-behavior: smooth;
-	}
-
-*,*::before,*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2 , h3 {
-  line-height: 1.2;
-  color: var(--text-color-primary);
-  font-weight: var(--fw-bold);
-  letter-spacing: -0.04em;
-}
-
-h1 {
-  font-size: var(--fs-2xl); 
-}
-h2 {
-  font-size: var(--fs-xl);
-}
-h3 {
-  font-size: var(--fs-lg);
-}
-
-@media (width >= 80em) {
-  :root {
-    --fs-lg: 2rem;
-    --fs-xl: 3rem;
-    --fs-2xl: 4rem;
-    --px-lg: 2rem;
-    --py-base: 1.5rem;
-    --py-lg: 2.5rem;
-    --py-xl: 5rem;
   }
-}
-a {
-  text-decoration: none;
-  color: inherit;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+    color: var(--text-color-primary);
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.04em;
+  }
+
+  h1 {
+    font-size: var(--fs-2xl);
+  }
+  h2 {
+    font-size: var(--fs-xl);
+  }
+  h3 {
+    font-size: var(--fs-lg);
+  }
+
+  @media (width >= 80em) {
+    :root {
+      --fs-lg: 2rem;
+      --fs-xl: 3rem;
+      --fs-2xl: 4rem;
+      --px-lg: 2rem;
+      --py-base: 1.5rem;
+      --py-lg: 2.5rem;
+      --py-xl: 5rem;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
     &:hover {
-    background: linear-gradient(90deg, #f7b733 0%, #fc4a1a 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+      background: linear-gradient(90deg, #f7b733 0%, #fc4a1a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
   }
-}
- ul[role="list"] {
-   list-style: none;
- }
- .container {
-  --max-width: 375px;
-  margin-inline: auto;
-  width: min(var(--max-width), 100% - var(--px-lg) * 2);
-   }
- .desktop-only {
-  display: none;
-}
-.even-columns {
-  display: grid;
-  gap: 1rem;
-}
- @media (width >= 80em) {
+  ul[role="list"] {
+    list-style: none;
+  }
   .container {
-    --max-width: 80rem;
+    --max-width: 375px;
+    margin-inline: auto;
+    width: min(var(--max-width), 100% - var(--px-lg) * 2);
   }
   .desktop-only {
-  display: initial;
- }
- .even-columns {
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+    display: none;
   }
- }
- 
- .py-base {
-  padding-block: var(--py-base);
- }
- .py-lg {
-  padding-block: var(--py-lg);
- }
- .py-xl {
-  padding-block: var(--py-xl);
- }
- .px-lg {
-  padding-inline: var(--px-lg);
- }
-img {
-  max-width: 100%;
- display: inline-block;
-}
-section {
-  header {
-    strong {
-      display: block;
-      font: var(--fw-md) var(--ff-sm)/100% var(--ff-sans);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--brand-color-primary);
+  .even-columns {
+    display: grid;
+    gap: 1rem;
+  }
+  @media (width >= 80em) {
+    .container {
+      --max-width: 80rem;
     }
-    h2 {
-      margin-top: .5rem;
+    .desktop-only {
+      display: initial;
     }
-     }
-  p {
-     margin-top: .5rem;
-     color: var( --text-color-secondary);
+    .even-columns {
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
     }
-}
+  }
 
+  .py-base {
+    padding-block: var(--py-base);
+  }
+  .py-lg {
+    padding-block: var(--py-lg);
+  }
+  .py-xl {
+    padding-block: var(--py-xl);
+  }
+  .px-lg {
+    padding-inline: var(--px-lg);
+  }
+  img {
+    max-width: 100%;
+    display: inline-block;
+  }
+  section {
+    header {
+      strong {
+        display: block;
+        font: var(--fw-md) var(--ff-sm) / 100% var(--ff-sans);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--brand-color-primary);
+      }
+      h2 {
+        margin-top: 0.5rem;
+      }
+    }
+    p {
+      margin-top: 0.5rem;
+      color: var(--text-color-secondary);
+    }
+  }
+
+  .card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 1.5rem;
+    h3 {
+      margin-top: 1rem;
+    }
+  }
 </style>

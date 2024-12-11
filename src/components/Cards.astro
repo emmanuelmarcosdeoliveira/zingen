@@ -1,0 +1,195 @@
+---
+
+---
+
+<section id="pricing">
+  <div class="container py-xl">
+    <header>
+      <strong>Planos e preços</strong>
+      <h2>Assine e tenha acesso limitado as todos as funcionalidades</h2>
+    </header>
+    <div class="gridCards">
+      <div class="cards even-columns items-center">
+        <div class="card py-lg px-lg">
+          <h3>Básico</h3>
+          <p>Baixe o app e comece a cantar agora mesmo!</p>
+          <zin-pricing>Grátis</zin-pricing>
+          <a class="btn btn-md" href="#download" aria-label="Baixar agora"></a>
+          <div class="separator"></div>
+          <ul role="list" class="grid gap-1">
+            <li>Com anúncios</li>
+            <li>Até 5 músicas por dia</li>
+            <li>Cante apenas as músicas disponíveis no plano gratuito</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="premium">
+        <div class="card py-lg px-lg">
+          <span>1 mês gratis</span>
+          <h3>Premium</h3>
+          <p>Ideal para quem já cansou de passar vergonha no Karaokê</p>
+          <zin-pricing>R$ 24,90<small> / mês</small></zin-pricing>
+          <a class="btn btn-md" href="#" aria-label="Experimente de graça"></a>
+          <div class="separator"></div>
+          <ul role="list" class="grid gap-1">
+            <li>Sem interrupção de anúncios</li>
+            <li>Cante quantas músicas quiser</li>
+            <li>Cante todas as músicas da biblioteca</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cards even-columns items-center">
+        <div class="card py-lg px-lg">
+          <h3>Família</h3>
+          <p>Para aquelas famílias que adoram se reunir pra cantar</p>
+          <zin-pricing>R$ 21,90<small> / mês por pessoa</small></zin-pricing>
+          <a class="btn btn-md" href="#" aria-label="Assinar agora"></a>
+          <div class="separator"></div>
+          <ul role="list" class="grid gap-1">
+            <li>Sem interrupção de anúncios</li>
+            <li>Cante quantas músicas quiser</li>
+            <li>Cante todas as músicas da biblioteca</li>
+          </ul>
+          <small>Mínimo de 4 pessoas no plano família.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --fs-price: 2rem;
+  }
+  #pricing {
+    & header {
+      text-align: center;
+    }
+  }
+  & .cards {
+    margin-top: 2rem;
+    p {
+      margin-top: 0.25rem;
+    }
+  }
+
+  & zin-pricing {
+    display: block;
+    padding-block: 1.5rem;
+    font: var(--fw-bold) var(--fs-price) / 1.2 var(--ff-sans);
+    small {
+      font: var(--fw-base) 1rem/125% var(--ff-sans);
+      color: var(--text-color-secondary);
+    }
+  }
+  .btn {
+    width: 100%;
+  }
+
+  & .separator {
+    height: 1px;
+    margin-block: 2rem;
+    background: radial-gradient(
+      var(--text-color-secondary),
+      var(--surface-color) 70%
+    );
+  }
+  & li {
+    color: var(--text-color-secondary);
+    background: url(../assets/icons/check.svg) no-repeat;
+    padding-left: 2rem;
+  }
+
+  & ul + small {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-color-secondary);
+  }
+
+  & .premium {
+    padding: 2px;
+    margin-top: 2rem;
+    position: relative;
+    .btn {
+      &::after {
+        background-color: var(--bg-color);
+      }
+      &::before {
+        background: white;
+        margin: 0.1rem;
+      }
+    }
+    & .card {
+      padding-top: 4.25rem;
+      & > span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0.75rem 2rem;
+        background: linear-gradient(
+          90deg,
+          var(--brand-color-secondary) 0%,
+          var(--brand-color-primary) 100%
+        );
+        border-top-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        font: 600 var(--fs-sm) var(--ff-sans);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--bg-color);
+      }
+    }
+    &::before {
+      content: "";
+      background: linear-gradient(
+        90deg,
+        var(--brand-color-secondary) 0%,
+        var(--brand-color-primary) 100%
+      );
+      position: absolute;
+      inset: 0;
+      border-radius: 1.5rem;
+      z-index: -1;
+    }
+  }
+
+  & h3 {
+    font-size: 1.25rem;
+    margin-top: 0;
+  }
+
+  @media (width >= 80em) {
+    :root {
+      --fs-price: 2.5rem;
+    }
+    & header {
+      max-width: 50rem;
+      margin-inline: auto;
+    }
+    & .premium .card {
+      padding-bottom: 6rem;
+      & zin-pricing {
+        padding-block: 0.5rem;
+      }
+    }
+    & .card:nth-child(3) .separator {
+      margin-block: 1.5rem;
+    }
+
+    & .card .premium {
+      height: 900px;
+    }
+
+    .btn-md {
+      padding: 0.75rem 1.5rem;
+      font-size: var(--fs-base);
+    }
+    .gridCards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2rem;
+    }
+  }
+</style>
