@@ -47,7 +47,7 @@
 
 Você gosta de música? então venha conhecer o **Zingen**.<br>
 É uma landing page de um aplicativo de música.  
-Projeto foi desenvolvido para a pratica de tecnologias, como `Astro`,`HTML`,`CSS` `JavaScript`.<br>
+Projeto foi desenvolvido para a pratica de tecnologias, como `Astro`,`HTML`,`SASS` `JavaScript`.<br>
 Minha fonte de motivação deste projeto foi a [RocketSeat](https://www.rocketseat.com.br/).<br>
 
 `Task`
@@ -87,7 +87,7 @@ Requisitos necessários para rodar o projeto:<br>
 
 ### technologies and tools
 
-`Astro` `JavaScript` `HTML` `CSS` `Pnpm`
+`Astro` `JavaScript` `HTML` `CSS` `Pnpm` `SASS` `prettier`
 
 ## Instalation
 
@@ -171,7 +171,7 @@ https://github.com/emmanuelmarcosdeoliveira/animais-fantasticos/assets/116108389
 Acesse a versão on-line Projeto clicando no Link Abaixo
 <br>
 <br>
-<a href="https://pagina-de-receitas-one.vercel.app/">
+<a href="https://zingen-nine.vercel.app/">
 <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
 
 </div>
@@ -189,7 +189,7 @@ Acesse a versão on-line Projeto clicando no Link Abaixo
 
 ## Contributors or owners
 
-<img height="64px" src="./src/assets/github/profile.png"><br>
+<img height="64px" src="./public/github/profile.png"><br>
 <small>Emmanuel Oliveira</small>
 
 developed by 💖 [Emmanuel Oliveira](https://www.linkedin.com/feed/?trk=homepage-basic_sign-in-submit)<br>
